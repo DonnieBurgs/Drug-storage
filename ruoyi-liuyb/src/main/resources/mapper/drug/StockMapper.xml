@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.liuyb.mapper.StockMapper">
+    
+    <resultMap type="Stock" id="StockResult">
+        <result property="stockid"    column="StockId"    />
+        <result property="stockdrugno"    column="StockDrugNo"    />
+        <result property="stockdrugname"    column="StockDrugName"    />
+        <result property="stocknum"    column="StockNum"    />
+    </resultMap>
+
+    <sql id="selectStockVo">
+        select StockId, StockDrugNo, StockDrugName,DrugVendor, StockNum,DrugPlace,DrugWarning,DrugUsed,CAST(StockNum as signed)-DrugWarning as num from stock
+        left join drug
+        on drug.DrugNo = stock.StockDrugNo
+    </sql>
+
+    <select id="selectStockList" parameterType="Stock" resultMap="StockResult">
+        <include refid="selectStockVo"/>
+        <where>  
+            <if test="stockdrugno != null "> and StockDrugNo like concat('%', #{stockdrugno}, '%')</if>
+            <if test="stockdrugname != null  and stockdrugname != ''"> and StockDrugName like concat('%', #{stockdrugname}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectStockByStockid" parameterType="Long" resultMap="StockResult">
+        <include refid="selectStockVo"/>
+        where StockId = #{stockid}
+    </select>
+<!--    新增，无则新增，有则更新-->
+    <insert id="insertStock" parameterType="Stock" useGeneratedKeys="true" keyProperty="stockid">
+        insert into stock
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="stockdrugno != null">StockDrugNo,</if>
+            <if test="stockdrugname != null and stockdrugname != ''">StockDrugName,</if>
+            <if test="stocknum != null">StockNum,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="stockdrugno != null">#{stockdrugno},</if>
+            <if test="stockdrugname != null and stockdrugname != ''">#{stockdrugname},</if>
+            <if test="stocknum != null">#{stocknum},</if>
+         </trim>
+        ON DUPLICATE KEY UPDATE
+        StockNum=StockNum+#{stocknum}
+    </insert>
+
+    <update id="updateStock" parameterType="Stock">
+        update stock
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="stockdrugno != null">StockDrugNo = #{stockdrugno},</if>
+            <if test="stockdrugname != null and stockdrugname != ''">StockDrugName = #{stockdrugname},</if>
+            <if test="stocknum != null">StockNum = #{stocknum},</if>
+        </trim>
+        where StockId = #{stockid}
+    </update>
+
+    <delete id="deleteStockByStockid" parameterType="Long">
+        delete from stock where StockId = #{stockid}
+    </delete>
+
+    <delete id="deleteStockByStockids" parameterType="String">
+        delete from stock where StockId in 
+        <foreach item="stockid" collection="array" open="(" separator="," close=")">
+            #{stockid}
+        </foreach>
+    </delete>
+</mapper>
