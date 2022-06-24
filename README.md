@@ -50,20 +50,41 @@ Node >= 12
 
 1.  登录（验证码功能已关闭，可参考若依开启验证码功能）。超级管理员： admin admin123 普通管理员：ry admin123
 
+
+![输入图片说明](demonstratelogin.png)
+
+
 2.  首页
+
+
+![输入图片说明](demonstrateshouye.png)
+
 
 3.  药品管理
 
-  1） 药品供应商管理
+  1） 药品供应商管理  
+
+![输入图片说明](demonstrategongyingshang.png)  
 
   2） 药品信息管理
 
+![输入图片说明](demonstratexinxi.png)
+
   3） 药品入库管理
+
+![输入图片说明](demonstrateruku.png)
 
   4） 药品出库管理
 
+![输入图片说明](demonstratechuku.png)
+
   5） 药品库存管理
 
+![输入图片说明](demonstratekucun.png)
+
   6） 药品回退管理
+
+![输入图片说明](demonstratetuihui.png)
+
 
 4.  系统管理和日志管理模块为[若依系统](http://www.ruoyi.vip/)模块。
