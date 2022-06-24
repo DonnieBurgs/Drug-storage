@@ -80,7 +80,7 @@ Node >= 12
 
   5） 药品库存管理
 
-![输入图片说明](demonstratekucun.png)
+![输入图片说明](demostratekucun.png)
 
   6） 药品回退管理
 
