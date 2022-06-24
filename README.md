@@ -5,8 +5,6 @@
 Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
 无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
 
-#### 软件架构
-软件架构说明
 
 #### 系统环境版本说明
 JDK >= 1.8 
@@ -37,54 +35,46 @@ Node >= 12
 
 (3)在终端使用npm run dev来启动项目
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
 
 #### 系统演示
 
 1.  登录（验证码功能已关闭，可参考若依开启验证码功能）。超级管理员： admin admin123 普通管理员：ry admin123
 
 
-![输入图片说明](demonstratelogin.png)
+![输入图片说明](yanshitu/login.png)
 
 
 2.  首页
 
 
-![输入图片说明](demonstrateshouye.png)
+![输入图片说明](yanshitu/shouye.png)
 
 
 3.  药品管理
 
   1） 药品供应商管理  
 
-![输入图片说明](demonstrategongyingshang.png)  
+![输入图片说明](yanshitu/gongyingshang.png)
 
   2） 药品信息管理
 
-![输入图片说明](demonstratexinxi.png)
+![输入图片说明](yanshitu/xinxi.png)
 
   3） 药品入库管理
 
-![输入图片说明](demonstrateruku.png)
+![输入图片说明](yanshitu/ruku.png)
 
   4） 药品出库管理
 
-![输入图片说明](demonstratechuku.png)
+![输入图片说明](yanshitu/chuku.png)
 
   5） 药品库存管理
 
-![输入图片说明](demostratekucun.png)
+![输入图片说明](yanshitu/kucun.png)
 
   6） 药品回退管理
 
-![输入图片说明](demonstratetuihui.png)
+![输入图片说明](yanshitu/tuihui.png)
 
 
 4.  系统管理和日志管理模块为[若依系统](http://www.ruoyi.vip/)模块。
