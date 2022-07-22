@@ -120,9 +120,9 @@
           </el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="用法用量" align="center" prop="drugused" />
+      <el-table-column label="用法用量" align="center" prop="drugused" show-overflow-tooltip />
       <el-table-column label="库存预警" align="center" prop="drugwarning" />
-      <el-table-column label="备注" align="center" prop="drugremark" />
+      <el-table-column label="备注" align="center" prop="drugremark" show-overflow-tooltip />
       <el-table-column
         label="操作"
         align="center"
