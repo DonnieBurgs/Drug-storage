@@ -34,6 +34,8 @@ Node >= 12
 
 
 #### 系统演示
+gitee演示图
+https://gitee.com/lby369/drugInOut
 
 1.  登录（验证码功能已关闭，可参考若依开启验证码功能）。
 
