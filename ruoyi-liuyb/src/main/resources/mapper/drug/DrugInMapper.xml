@@ -59,11 +59,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         ON drug_in.DrugInNo = stock.StockDrugNo
     </select>
 
-    <!--  按月查询入库数据统计 -->
+    <!--  按月查询入库数据统计 只统计半年 -->
     <select id="selectDrugInNumByMonth" resultMap="DrugInResult">
         SELECT sum(DrugInNum) as DrugInNum,DrugInTime FROM drug_in
         GROUP BY DATE_FORMAT(DrugInTime,"%Y-%m")
-        ORDER BY DrugInTime
+        ORDER BY DrugInTime desc
+        limit 0,6
     </select>
 
     <insert id="insertDrugIn" parameterType="DrugIn" useGeneratedKeys="true" keyProperty="druginid">

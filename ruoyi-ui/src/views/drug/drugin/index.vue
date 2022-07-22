@@ -123,8 +123,8 @@
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="序号" align="center" type="index" />
       <el-table-column label="药品编号" align="center" prop="druginno" />
-      <el-table-column label="药品名称" align="center" prop="druginname" />
-      <el-table-column  label="供应商" align="center" prop="drugsuppliername"/>
+      <el-table-column label="药品名称" align="center" prop="druginname" show-overflow-tooltip />
+      <el-table-column  label="供应商" align="center" prop="drugsuppliername" show-overflow-tooltip/>
       <el-table-column
         label="入库时间"
         align="center"
@@ -138,7 +138,7 @@
         </template>
       </el-table-column>
       <el-table-column label="批次" align="center" prop="druginbatch" />
-      <el-table-column label="厂商" align="center" prop="druginfirm" />
+      <el-table-column label="厂商" align="center" prop="druginfirm" show-overflow-tooltip />
       <el-table-column label="数量" align="center" prop="druginnum" />
       <el-table-column
         label="生产时间"

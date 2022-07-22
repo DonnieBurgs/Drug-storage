@@ -111,8 +111,8 @@
       <el-table-column label="药品编号" align="center" prop="drugno" />
       <el-table-column label="药品名" align="center" prop="drugname" />
       <el-table-column label="保质期/月" align="center" prop="drugexpirydata" />
-      <el-table-column label="厂商" align="center" prop="drugvendor" />
-      <el-table-column label="规格" align="center" prop="drugspec" />
+      <el-table-column label="厂商" align="center" prop="drugvendor"  show-overflow-tooltip/>
+      <el-table-column label="规格" align="center" prop="drugspec" show-overflow-tooltip />
       <el-table-column label="存放地点" align="center">
         <template slot-scope="scope">
           <el-tag :type="'primary'">

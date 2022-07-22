@@ -103,9 +103,9 @@
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="序号" align="center" type="index" />
       <el-table-column label="药品编号" align="center" prop="untreadno" />
-      <el-table-column label="药品名称" align="center" prop="untreaddrugname" />
-      <el-table-column label="供应商" align="center" prop="untreadsuppliername" />
-      <el-table-column label="厂商" align="center" prop="untreaddrugvendor" />
+      <el-table-column label="药品名称" align="center" prop="untreaddrugname" show-overflow-tooltip />
+      <el-table-column label="供应商" align="center" prop="untreadsuppliername" show-overflow-tooltip />
+      <el-table-column label="厂商" align="center" prop="untreaddrugvendor" show-overflow-tooltip />
       <el-table-column label="退回数量" align="center" prop="untreadnum" />
       <el-table-column label="退货日期" align="center" prop="untreadtime" width="180"
       sortable
@@ -115,7 +115,7 @@
           <span>{{ parseTime(scope.row.untreadtime, '{y}-{m}-{d}') }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="退货原因" align="center" prop="untreadreason" />
+      <el-table-column label="退货原因" align="center" prop="untreadreason" show-overflow-tooltip />
       <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button

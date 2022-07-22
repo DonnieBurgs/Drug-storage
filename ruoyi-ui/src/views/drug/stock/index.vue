@@ -103,8 +103,8 @@
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="序号" align="center" type="index" />
       <el-table-column label="药品编号" align="center" prop="stockdrugno" />
-      <el-table-column label="药品名" align="center" prop="stockdrugname" />
-      <el-table-column label="厂商" align="center" prop="drugvendor" />
+      <el-table-column label="药品名" align="center" prop="stockdrugname" show-overflow-tooltip />
+      <el-table-column label="厂商" align="center" prop="drugvendor" show-overflow-tooltip />
       <el-table-column
         label="库存"
         align="center"
@@ -124,7 +124,7 @@
       </el-table-column>
       <el-table-column label="存放地点" align="center" prop="drugplace" />
       <el-table-column label="预警值" align="center" prop="drugwarning" />
-      <el-table-column label="用法用量" align="center" prop="drugused" />
+      <el-table-column label="用法用量" align="center" prop="drugused" show-overflow-tooltip />
       <el-table-column
         label="操作"
         align="center"

@@ -42,11 +42,13 @@
         WHERE DATE_FORMAT(DrugOutTime,'%Y%m') = DATE_FORMAT(CURDATE(),'%Y%m')
         GROUP BY DrugOutNo
     </select>
-    
+
+    <!-- 按月统计 只统计半年-->
     <select id="selectDrugOutNumByMonth" resultMap="DrugOutResult">
         SELECT SUM(DrugOutNum) AS DrugOutNum,DrugOutTime FROM drug_out
         GROUP BY DATE_FORMAT(DrugOutTime,"%Y-%m")
-        ORDER BY DrugOutTime
+        ORDER BY DrugOutTime desc
+        limit 0,6
     </select>
 
     <insert id="insertDrugOut" parameterType="DrugOut" useGeneratedKeys="true" keyProperty="drugoutid">

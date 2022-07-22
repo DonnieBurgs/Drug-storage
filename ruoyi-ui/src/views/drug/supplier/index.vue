@@ -83,8 +83,8 @@
     <el-table v-loading="loading" :data="supplierList" @selection-change="handleSelectionChange">
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="序号" align="center" type="index" />
-      <el-table-column label="供应商名称" align="center" prop="suppliername" />
-      <el-table-column label="供应商地址" align="center" prop="supplieraddress" />
+      <el-table-column label="供应商名称" align="center" prop="suppliername" show-overflow-tooltip />
+      <el-table-column label="供应商地址" align="center" prop="supplieraddress" show-overflow-tooltip />
       <el-table-column label="负责人" align="center" prop="supplieruser" />
       <el-table-column label="联系电话" align="center" prop="supplierphone" />
       <el-table-column label="添加时间" align="center" prop="createtime" width="180">

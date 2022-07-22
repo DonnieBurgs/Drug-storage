@@ -591,7 +591,7 @@ export default {
               padding: [30, 0, 0, 0],
               textStyle: {
                 color: "#000",
-                fontSize: 20,
+                fontSize: 14,
               },
               align: "center",
             },
@@ -605,7 +605,7 @@ export default {
             axisLine: {
               show: true,
               lineStyle: {
-                color: "#000",
+                color: '#333',
               },
             },
             axisTick: {
@@ -627,7 +627,7 @@ export default {
           {
             name: "出库",
             type: "bar",
-            barWidth: 25,
+            barWidth: '35%',
             stack: "1",
             itemStyle: {
               normal: {
@@ -662,7 +662,7 @@ export default {
             name: "入库",
             type: "bar",
             stack: "2",
-            barWidth: 25,
+            barWidth: '35%',
             xAxisIndex: 2,
             yAxisIndex: 2,
             itemStyle: {

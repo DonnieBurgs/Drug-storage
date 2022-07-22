@@ -132,7 +132,7 @@
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column label="序号" align="center" type="index" />
       <el-table-column label="药品编号" align="center" prop="drugoutno" />
-      <el-table-column label="药品名称" align="center" prop="drugoutname" />
+      <el-table-column label="药品名称" align="center" prop="drugoutname" show-overflow-tooltip />
       <el-table-column
         label="出库时间"
         align="center"
