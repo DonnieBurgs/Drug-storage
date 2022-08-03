@@ -42,6 +42,8 @@ https://gitee.com/lby369/drugInOut
 
 超级管理员： admin admin123 普通管理员：ry admin123
 
+sql文件联系 QQ:1310843283(有偿，该系统可用于课设等)
+
 
 ![输入图片说明](yanshitu/login.png)
 
