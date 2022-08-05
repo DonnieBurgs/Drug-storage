@@ -146,13 +146,13 @@
         </template>
       </el-table-column>
       <el-table-column label="批次" align="center" prop="drugoutbatch" />
-      <el-table-column label="现有库存" align="center" prop="stocknum">
+      <!-- <el-table-column label="现有库存" align="center" prop="stocknum">
         <template slot-scope="scope">
           <el-tag :type="'primary'">
             {{ scope.row.stocknum }}
           </el-tag>
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column label="出库数量" align="center" prop="drugoutnum" />
       <el-table-column
         label="操作"
@@ -365,22 +365,16 @@ export default {
         console.log(this.ListNo);
       });
     },
-    //当联动下拉数据 编号联动名称 二级联动批次  数据校验等
     changeSelect() {
       // this.form.drugoutname = "";
       this.form.drugoutbatch="";
       this.vendorList = [];
       for (var i = 0; i < this.ListNo.length; i++) {
         if (this.form.drugoutno === this.ListNo[i].name) {
-          // 编号联动名称
           this.form.drugoutname = this.ListNo[i].value;
-          // 二级联动  选定药品编号以后，会把这个编号下的批次放入vendorList中，
-          //为了下拉选择不会选到不属于自己药品编号的批次
           for (var j = 0; j < this.batch.length; j++) {
             if (this.ListNo[i].name == this.batch[j].name) {
-              // 默认批次置空
                this.form.drugoutbatch = "";
-              // 现有库存数 ——> 数据校验用
               this.NowStockNum = this.batch[j].num;
               this.vendorList.push(this.batch[j].value);
             }
@@ -390,13 +384,6 @@ export default {
       // console.log(this.NowStockNum);
       // console.log(this.vendorList);
     },
-
-    /**
-     * @Author  Liuyb
-     * @时间 2022-04-24 09:01:25
-     * @功能 获取药品入库的所有批次 为二级数据联动的数据源
-     * @param
-     */
     getbatch() {
       getBatch().then((response) => {
         this.batchlist = response.data;
