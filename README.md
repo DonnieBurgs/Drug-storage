@@ -44,8 +44,10 @@ https://gitee.com/lby369/drugInOut
 
 sql文件联系 QQ:1310843283(有偿，该系统可用于课设等)
 
+登录包括两种不同的风格，一种是背景图，一种是three.js粒子动效。默认样式为背景图，若要更换则将src/views/login1.vue和login.vue文件名进行更改，让你想使用的样式的文件名为login.vue则可。（两个文件只能有一个名为login.vue,那个名为login.vue则就是那个样式）
 
 ![输入图片说明](yanshitu/login.png)
+![输入图片说明](yanshitu/login1.png)
 
 
 2.  首页
