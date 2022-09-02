@@ -261,8 +261,13 @@ export default {
       canvas.height = window.innerHeight;
       const ctx = canvas.getContext("2d");
       const gradient = ctx.createLinearGradient(0, 0, window.innerWidth, 0);
-      gradient.addColorStop(0, "#8DD65C"); //'#4e22b7'
-      gradient.addColorStop(1, "#4EC6E4"); //'#3292ff'
+      gradient.addColorStop(0, "#91B821"); //'#8DD65C'      页面背景色
+      gradient.addColorStop(1, "#D80835"); //'#4EC6E4'      页面背景色
+                                          // 几组好看的背景色组合（中国风撞色）  
+                                          // 1:  "#004EA2"  "#FDD876"   暴风蓝与栀子
+                                          // 2：  "#C8191D"  "#FFF7F0"   蕉红与玉色
+                                          // 3：  "#5F479A"  "#FCC800"   紫罗兰与明黄
+                                          // 4：  "#A5D1B5"  "#F7DCA4"   鹦哥绿与密陀僧  
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       const canvasTexture = new THREE.CanvasTexture(canvas);

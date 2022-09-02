@@ -36,8 +36,15 @@
             <artifactId>swagger-models</artifactId>
             <version>1.6.2</version>
         </dependency>
+        <!-- 引入积木报表  -->
+        <dependency>
+            <groupId>org.jeecgframework.jimureport</groupId>
+            <artifactId>jimureport-spring-boot-starter</artifactId>
+            <version>1.5.2</version>
+        </dependency>
 
-         <!-- Mysql驱动包 -->
+
+        <!-- Mysql驱动包 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
