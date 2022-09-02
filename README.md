@@ -82,5 +82,7 @@ sql文件联系 QQ:1310843283(有偿，该系统可用于课设等)
 
 ![输入图片说明](yanshitu/tuihui.png)
 
+4.  系统集成了积木报表（详情请访问积木[报表官网](http://www.jimureport.com/)）
+![输入图片说明](yanshitu/jimu.png)
 
-4.  系统管理和日志管理模块为[若依系统](http://www.ruoyi.vip/)模块。
+5.  系统管理和日志管理模块为[若依系统](http://www.ruoyi.vip/)模块。
